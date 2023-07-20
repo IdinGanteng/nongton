@@ -1,11 +1,18 @@
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
-
-import React from 'react'
+import Login from "./Login";
+import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
+import Verify from "./Verify";
 
 const App = () => {
   return (
-    <h1>asjdhsjh</h1>
+    <div className="bg">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/verifikasi" element={<Verify/>}/>
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
-export default App
+export default App;
