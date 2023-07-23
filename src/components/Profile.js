@@ -10,7 +10,7 @@ export const Profile = ({ title, description, imgUrl, desc }) => {
           <span>{description}</span>
         </div>
       </div>
-      <p style={{width:"200%"}}>{desc}</p>
+      <p style={{width:"100%"}}>{desc}</p>
     </Col>
   )
 }
