@@ -1,52 +1,42 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+const express = require('express');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
 
-// server used to send send emails
 const app = express();
+const port = 5000;
+
+// Enable CORS for cross-origin requests
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
+// Replace these with your email credentials and configuration
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
   auth: {
-    user: "********@gmail.com",
-    pass: ""
+    user: 'maukif99@gmail.com',
+    pass: 'paninggaran',
   },
 });
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
+app.post('https://real-blue-blackbuck-garb.cyclic.app/user', async (req, res) => {
+  const { email, message } = req.body;
+
+  try {
+    // Send the email
+    await transporter.sendMail({
+      from: 'maukif99@gmail.com',
+      to: 'kanggayus101@gmail.com', // Replace this with the recipient's email address
+      subject: 'New Message from Contact Form',
+      text: `${email} sent the following message: ${message}`,
+    });
+
+    res.status(200).json({ message: 'Message sent successfully!' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Failed to send message.' });
   }
 });
 
-router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
-  const mail = {
-    from: name,
-    to: "kanggayus101@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
-  });
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

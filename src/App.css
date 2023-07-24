@@ -361,7 +361,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 82%;
+  width: 92%;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
@@ -537,7 +537,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
-
+@media (max-width: 600px) {
+  /* Ganti lebar dan tinggi peta sesuai dengan kebutuhan responsif Anda */
+  .map-container {
+    width: 100%;
+    height: 430px; /* Atur tinggi peta sesuai preferensi Anda */
+  }
+}
+.map-container{
+  background: #FFFFFF;
+  border-radius: 55px;
+  padding:  20px 25px;
+  margin-bottom: 50px;
+  
+}
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;

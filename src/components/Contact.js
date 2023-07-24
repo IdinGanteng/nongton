@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import GoogleMapsComponent from "./Location";
+
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -26,21 +28,35 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://real-blue-blackbuck-garb.cyclic.app/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+    try {
+      const response = await fetch('https://real-blue-blackbuck-garb.cyclic.app/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDetails),
+      });
+
+      if (response.ok) {
+        // Handle success, e.g., show a success message to the user
+        console.log('Message sent successfully!');
+        setFormDetails('');
+        
+      } else {
+        // Handle error, e.g., show an error message to the user
+        console.error('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
     }
+    // setButtonText("Send");
+    // let result = await response.json();
+    // setFormDetails(formInitialDetails);
+    // if (result.code == 200) {
+    //   setStatus({ succes: true, message: 'Message sent successfully'});
+    // } else {
+    //   setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+    // }
   };
 
   return (
@@ -59,7 +75,8 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
+                <GoogleMapsComponent/>
+                {/* <form onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
@@ -84,7 +101,7 @@ export const Contact = () => {
                       </Col>
                     }
                   </Row>
-                </form>
+                </form> */}
               </div>}
             </TrackVisibility>
           </Col>
