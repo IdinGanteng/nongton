@@ -45,8 +45,8 @@ export const Projects = () => {
   ];
  const profile = [
   {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Riski Maulidin Akbar",
+      description: "Web Development",
       imgUrl: profileImg,
  },{
       desc:"WHATS UP! A man born in 2004, im a front end development who studied at Senior High School, and joined the Praxis Academy bootcamp in Yogyakarta, July 2022.The second son, who is usually called Idin, from the couple Maryono and Fatkhah, has a hobby of playing music. I'm currently exploring web development and programming languages ​​like JavaScript."
