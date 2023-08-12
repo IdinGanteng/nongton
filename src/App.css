@@ -160,6 +160,7 @@ span.navbar-text {
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
+  border-radius: 20px;
 }
 .navbar-text button span {
   z-index: 1;
@@ -174,6 +175,7 @@ span.navbar-text {
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  border-radius: 20px;
 }
 .navbar-text button:hover {
   color: #121212;
