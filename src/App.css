@@ -170,16 +170,16 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background:linear-gradient(90.21deg, rgba(170, 54, 124, 0.904) -5.91%, rgba(73, 47, 189, 0.904) 111.58%);
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
   border-radius: 20px;
 }
-.navbar-text button:hover {
+/* .navbar-text button:hover {
   color: #121212;
-}
+} */
 .navbar-text button:hover::before {
 	content: "";
 	width: 100%;
@@ -300,6 +300,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+.lets-connect{
+  text-decoration: none;
+  color: #B8B8B8;
+}
+.lets-connect:hover{
+  color: white;
 }
 
 /************ Skills Css ************/
