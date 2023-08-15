@@ -12,16 +12,16 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <SendMessage/>
-          {/* <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
-          </Col> */}
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          <Col size={12} sm={6} className="text-center text-sm-start">
+            {/* <img src={logo} alt="Logo" /> */}
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/riski-maulidin-akbar-43a793276/" target="_blank"><img src={navIcon1} alt="Icon" /></a>
               <a href="https://web.facebook.com/profile.php?id=100094895471714" target="_blank"><img src={navIcon2} alt="Icon" /></a>
               <a href="https://www.instagram.com/donquixote_doff/" target="_blank"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+          </Col>
+          <Col size={12} sm={6} className="text-center text-sm-end">
+            <p>Copyright 2022. Riski Maulidin Akbar</p>
           </Col>
         </Row>
       </Container>
