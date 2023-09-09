@@ -1,9 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import { Profile } from "./Profile";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/iboost.png";
+import projImg2 from "../assets/img/octopus.png";
+import projImg3 from "../assets/img/idinLogo2.png";
+import projImg4 from "../assets/img/praxis-student.jpeg"
 import profileImg from "../assets/img/idin.jpeg"
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -13,35 +14,35 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "iBoost Corporate",
+      description: "Mengembangkan produk pengiriman pesan secara masal dengan bekerja sama dengan perusahaan telekomunikasi di Indonesia, dengan tujuan membantu UMKM untuk membuka pasar",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Octopus edc",
+      description: "OCTOPUS Eduction adalah platform digital untuk pendidikan sekolah dasar sampai menengah atas",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Idin Blogspot",
+      description: "Merupakan website pribadi saya yang berisikan biodata diri saya. Juga beberapa portofolio.",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Praxis For Student",
+      description: "Adalah kelas online web development, python, dan pemrograman lain, yang ditujukan untuk para siswa dari sekolah menengah pertama dan menengah keatas.",
+      imgUrl: projImg4,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg2,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    // },
   ];
  const profile = [
   {
