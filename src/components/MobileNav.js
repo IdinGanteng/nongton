@@ -9,8 +9,8 @@ const MobileNav = () => {
       <a className="mobile-icon" href="#home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
+          width="35"
+          height="35"
           viewBox="0 0 77 70"
           fill="none"
         >
@@ -23,9 +23,9 @@ const MobileNav = () => {
       <a className="mobile-icon" href="#skills">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="55"
-          height="55"
-          viewBox="0 0 100 100"
+          width="40"
+          height="40"
+          viewBox="0 0 100 90"
           fill="none"
         >
           <g clip-path="url(#clip0_17_7)">
@@ -45,8 +45,8 @@ const MobileNav = () => {
       <button class="add-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="70"
-          height="70"
+          width="55"
+          height="55"
           viewBox="0 0 98 98"
           fill="none"
         >
@@ -61,8 +61,8 @@ const MobileNav = () => {
       <a className="mobile-icon" href="#projects">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
+          width="35"
+          height="35"
           viewBox="0 0 100 100"
           fill="none"
         >
@@ -77,8 +77,8 @@ const MobileNav = () => {
       <a className="mobile-icon" href="#connect">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="60"
-          height="60"
+          width="45"
+          height="45"
           viewBox="0 0 100 100"
           fill="none"
         >

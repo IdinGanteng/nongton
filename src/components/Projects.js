@@ -7,6 +7,9 @@ import projImg3 from "../assets/img/idinLogo2.png";
 import projImg4 from "../assets/img/praxis-student.jpeg"
 import profileImg from "../assets/img/idin.jpeg"
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import mentorImg from "../assets/img/mentor.jpeg";
+import contentWriterImg from "../assets/img/content-writer.jpeg";
+import frontendImg from "../assets/img/frontend.jpeg"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -53,6 +56,23 @@ export const Projects = () => {
       desc:"WHATS UP! A man born in 2004, im a front end development who studied at Senior High School, and joined the Praxis Academy bootcamp in Yogyakarta, July 2022.The second son, who is usually called Idin, from the couple Maryono and Fatkhah, has a hobby of playing music. I'm currently exploring web development and programming languages ​​like JavaScript."
  }
 ]
+const experience = [
+  {
+    title:"Mentoring Web Programming",
+    description:"Mentor for Techno Natura Jogja madrasa school children equivalent to elementary and middle school (September 2022-present). Provides HTML CSS JavaScript development learning",
+    imgUrl:mentorImg
+  },
+  {
+    title:"Content Writer",
+    description:"Content writer at Hellymedia.com media and journalist (August 2023-present). Write 5 articles a day and try to find the latest ideas and innovations.",
+    imgUrl:contentWriterImg
+  },
+  {
+    title:"Frontend Developer",
+    description:"Frontend developer internship at Praxis Academy Yogyakarta (August 2022 - present). Working on client projects using tools such as JavaScript libraries and CSS frameworks",
+    imgUrl:frontendImg
+  }
+]
   return (
     <section className="project" id="projects">
       <Container>
@@ -71,7 +91,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Project</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Others</Nav.Link>
+                      <Nav.Link eventKey="third">Experience</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -109,7 +129,20 @@ export const Projects = () => {
                     </Tab.Pane>
                     
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Row>
+                        {
+                          experience.map((experiences, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...experiences}
+                                />
+                                
+                            )
+                          })
+                        }
+                        
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
