@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-const PDF_FILE_URL = 'http://localhost:3000/my_cv.pdf'
+const PDF_FILE_URL = 'https://idin-resume.vercel.app/my_cv.pdf'
 
 const SendMessage = () => {
   const downloadFile =(url)=>{
